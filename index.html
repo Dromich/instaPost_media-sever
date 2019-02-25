@@ -7,11 +7,6 @@
 	<title>Insta API test</title>
 	
 
-	<script
-			  src="https://code.jquery.com/jquery-3.3.1.min.js"
-			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-			  crossorigin="anonymous"></script>
-
 
 <link rel="stylesheet" href="main.css">
 
@@ -38,35 +33,30 @@
 
 <script type="text/javascript">
 	window.onload = function(){
-		  document.getElementById('main_inp').onkeyup = function(){
-console.log(this.value);
+document.getElementById('main_inp').onkeyup = function(){
 
-$("#result_im").attr('src',this.value + "media/?size=l");
+document.getElementById('result_im').setAttribute('src', this.value + "media/?size=l");
+
+
+
 console.log(this.value + "media/?size=l");
 
 
 setTimeout(() => {
-	$('#get_res').css('display', 'block');
-	$("#get_res").attr('href',$("#result_im").attr('src'));
+	
+
+	document.getElementById('get_res').style.display="block";
+
+	
+
+	document.getElementById('get_res').setAttribute('href', this.value + "media/?size=l");
 
 }, 1500);				
 		  };
 	};
 	</script>
 	
-	<script>
 	
-	$(document).ready(function () {
-		$.ajax({
-			type: "GET",
-			url: "https://api.instagram.com/oembed?url=http://instagr.am/p/fA9uwTtkSN/",
-			dataType: 'jsonp',
-			success: function (response) {
-				console.log(response)
-			}
-		});
-	});
-	</script>
 <body>
 	
 </body>
