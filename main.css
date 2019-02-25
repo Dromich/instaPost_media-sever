@@ -1,0 +1,68 @@
+body{
+	/*background-image: url(temnaja-metallicheskaja-setka-1.jpg);*/
+	background-color: #333;
+	background-size: auto;
+	background-repeat: repeat;
+	color: #fbad50;
+}
+h1{
+	width: 100%;
+	text-align: center;
+	color: #fbad50;
+}
+#main_inp {
+	display: block;
+	width: 280px;
+	margin: 10px auto;
+	border: 1px solid #fbad50;
+	border-radius: 17px;
+	height: 20px;
+	padding: 10px;
+	background-color: rgba(0, 0, 0,.4);
+	color: #fbad50;
+	text-align: center;
+	max-width: 100%;
+}
+#app {
+width: 100%;
+height: 100%;
+display: block;
+background-size: cover;
+background-repeat: no-repeat;
+position: absolute;
+top: 0;
+left: 0;
+z-index: -1;
+}
+#bottom_pologon {
+	width: 100%;
+	height: 200px;
+	display: block;
+	-webkit-clip-path:polygon(21.03% 45.5%, 52.09% 76.50%, 99.88% 99%, 0% 100%); 
+	clip-path: polygon(21.03% 45.5%, 52.09% 76.50%, 99.88% 99%, 0% 100%);
+	background-color: #fbad50;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+#result_im {
+	max-width: 150px;
+	border-radius: 17px;
+	display: block;
+	margin: 5px auto;
+}
+#get_res {
+	vertical-align: middle;
+	border: 1px solid orange;
+	padding: 15px;
+	border-radius: 15px;
+	color: orange;
+	text-decoration: none;
+	display: none;
+	text-align: center;
+	margin: 10px auto;
+}
+#result {
+	margin-top: 100px;
+	padding: 10px;
+}

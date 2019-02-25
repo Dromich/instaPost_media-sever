@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Insta API test</title>
+	
+
+	<script
+			  src="https://code.jquery.com/jquery-3.3.1.min.js"
+			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			  crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="main.css">
+
+
+			 
+</head>
+<h1>Insta Post media Saver</h1>
+
+
+<input type="text" name="main" id="main_inp"  placeholder="Ведіть адресу поста Instagram">
+
+<div id="result">
+<img id="result_im"  src=""> <a id="get_res"  href="">DOWNLOAD</a>
+
+</div>
+
+
+
+
+
+
+
+<span id="bottom_pologon"></span>
+
+<script type="text/javascript">
+	window.onload = function(){
+		  document.getElementById('main_inp').onkeyup = function(){
+console.log(this.value);
+
+$("#result_im").attr('src',this.value + "media/?size=l");
+console.log(this.value + "media/?size=l");
+
+
+setTimeout(() => {
+	$('#get_res').css('display', 'block');
+	$("#get_res").attr('href',$("#result_im").attr('src'));
+
+}, 1500);				
+		  };
+	};
+	</script>
+	
+	<script>
+	
+	$(document).ready(function () {
+		$.ajax({
+			type: "GET",
+			url: "https://api.instagram.com/oembed?url=http://instagr.am/p/fA9uwTtkSN/",
+			dataType: 'jsonp',
+			success: function (response) {
+				console.log(response)
+			}
+		});
+	});
+	</script>
+<body>
+	
+</body>
+</html>
